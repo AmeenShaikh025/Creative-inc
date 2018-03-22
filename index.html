@@ -1,0 +1,315 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Inc</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+.home-about-textbox {
+
+	background-color:#232323;
+	padding: 3em;
+	width: 100vw;
+	margin-left: -2.5%;
+	outline: 2px solid #00ff6c;
+	outline-offset: -2.5em;
+	color: #FFF;
+	position: relative;
+}
+
+.home-about-textbox h1{
+
+	color: #00ff6c; 
+	position: absolute;
+	top: .35em;
+	/*left:50%;
+	transform: translateX(50%);
+*/	background: #232323;
+	padding: 0 .1em;
+}
+
+@media(min-width: 25rem){
+	h1{
+		font-size: 2rem;
+	}
+
+	.home-about-textbox h1{
+
+		top:.6em;
+		padding: 0 .325em;
+	}
+}
+
+
+@media(min-width: 60rem){
+	h1{
+		font-size: 2.5rem;
+	}
+
+	.home-about{
+		background-image: url("img/who-we-are.jpg");
+		background-repeat: no-repeat;
+		padding-bottom: 10em;
+	}
+
+	.home-about-textbox {
+
+		width: 50%;
+		padding: 7em;
+		outline-offset: -3.75em;
+		margin-left: -2.5%;
+		top:-5em;
+		text-align: left;
+		box-shadow: 0 0 3em 0 rgba(0,0,0,.4);
+	}
+
+
+	.home-about-textbox h1{
+
+		top:..75em;
+		left: 6rem;
+		transform: translateX(0);
+
+	}
+
+}
+
+
+
+/*portfolio
+=================*/
+
+.portfolio{
+	margin: 3em 0 0;
+}
+
+.port-item{
+	margin: 0;
+	position: relative;/*to move things properly*/
+}
+
+.port-item img{
+	display: block;/*if an image is all by itself and there is a small gap below use this*/
+}
+
+.port-desc{
+	position: absolute;
+	z-index: 100;/*to make the project title come above the image*/
+	bottom: 0em;
+	left: 0em;
+	right: 0em;
+	color: white;
+	background: rgba(0,0,0,.6);
+	padding: 1em;
+	padding-bottom: 2em;
+}
+
+
+.port-desc p{
+	margin:1em;
+}
+
+@media(min-width: 38rem ){
+	.port-item{
+		width:50%;
+		float: left;
+	}
+}
+
+@media(min-width: 60rem ){
+	.port-item{
+		width:33.3333334%;
+		overflow: hidden;
+	}
+
+	.port-desc {
+		transform: translateY(150%);
+	}
+
+	.port-item:hover .port-desc{
+		transform: translateY(0%);/*??(didn't understood) hover won't work in resposive*/
+	}
+}
+
+/*CTA
+===================*/
+
+.cta{
+	background-color:#00ff6c;
+	padding: 5em 0; 
+}
+
+
+/*footer
+===================*/
+
+footer{
+	background: #232323;
+	color: #fff;
+	text-align: left;
+	padding: 5em 0;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+	<img src="img/logo.png" alt="Creative inc. logo" class="logo">
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+<section class="home-hero parallax--bg">
+	<div class="container">
+		<h1 class="title">Making things look great 
+			<span>for companies who make great stuff</span>
+		</h1>
+		<a href="" class="button button-accent">SEE OUR WORK</a>
+	</div>
+</section>
+
+<div class="container"> 
+	<section class="home-about">
+		
+
+		<div class="home-about-textbox parallax--box">
+			<h1>Who we are</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper est sit amet dui consequat dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			<p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Praesent semper est sit amet dui consequat dignissim..</p>
+		</div>
+
+	</section>
+
+</div>
+
+<section class="portfolio">
+	<h1>SOME OF OUR WORK</h1>
+
+	<!-- portfolio item 01 -->
+	<figure class="port-item">
+		<img src="img/portfolio-01.jpg" alt="portfolio item">
+		<figcaption class="port-desc">
+			<p>Project title</p>
+			<a href="" class="button button-accent button-small">Project details</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 02 -->
+	<figure class="port-item">
+		<img src="img/portfolio-02.jpg" alt="portfolio item">
+		<figcaption class="port-desc">
+			<p>Project title</p>
+			<a href="" class="button button-accent button-small">Project details</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 03 -->
+	<figure class="port-item">
+		<img src="img/portfolio-03.jpg" alt="portfolio item">
+		<figcaption class="port-desc">
+			<p>Project title</p>
+			<a href="" class="button button-accent button-small">Project details</a>
+		</figcaption>
+	</figure>
+
+<!-- portfolio item 04 -->
+	<figure class="port-item">
+		<img src="img/portfolio-04.jpg" alt="portfolio item">
+		<figcaption class="port-desc">
+			<p>Project title</p>
+			<a href="" class="button button-accent button-small">Project details</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 05 -->
+	<figure class="port-item">
+		<img src="img/portfolio-05.jpg" alt="portfolio item">
+		<figcaption class="port-desc">
+			<p>Project title</p>
+			<a href="" class="button button-accent button-small">Project details</a>
+		</figcaption>
+	</figure>
+
+<!-- portfolio item 06 -->
+	<figure class="port-item">
+		<img src="img/portfolio-06.jpg" alt="portfolio item">
+		<figcaption class="port-desc">
+			<p>Project title</p>
+			<a href="" class="button button-accent button-small">Project details</a>
+		</figcaption>
+	</figure>
+</section>
+
+<section class="cta">
+	
+	<div class="container">
+		<h1 class="title title-cta">Like what you see? 
+			<span>Then what are you waiting for?</span>
+		</h1>
+		<a href="" class="button button-dark">HIRE US</a>
+	</div>
+
+</section>
+
+
+<footer>
+	
+
+<div class="container">
+		<div class="col-3">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper est sit amet dui consequat dignissim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper est sit amet dui consequat dignissim</p>
+		</div>
+
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>shoreditch</strong></li>
+				<li>Rocky</li>
+				<li>Punk</li>
+				<li>GOAT</li>
+				<li>Cena</li>
+			</ul>
+		</div>
+			
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>shoreditch</strong></li>
+				<li>Rocky</li>
+				<li>Punk</li>
+				<li>GOAT</li>
+				<li>Cena</li>
+			</ul>
+		</div>
+
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>shoreditch</strong></li>
+				<li>Rocky</li>
+				<li>Punk</li>
+				<li>GOAT</li>
+				<li>Cena</li>
+			</ul>
+		</div>
+</div>
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/parallax.js"></script>
+
+</body>
+</html>

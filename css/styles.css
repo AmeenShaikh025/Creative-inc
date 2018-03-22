@@ -1,0 +1,297 @@
+/*Google fonts:
+
+Raleway
+ - Light -> 300
+ - Regular -> 400
+ - Bold -> 700
+ - Heavy -> 900*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+*{
+	box-sizing: border-box;/*makes padding easy*/
+	transition: all ease-in-out 250ms;
+}
+header{
+	width: 1255px !important;
+}
+
+body{
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+img{
+	max-width: 100%;/*for responsive mobile so that image can take max width of mobile*/
+	height: auto;
+}
+
+.container{
+	width: 95%;
+	max-width: 70em;
+	margin: 0 auto;
+}
+
+.clearfix::after,
+section::after,
+footer:after{
+		content: '';
+		display: block;
+		clear: both;
+}
+
+
+/*column system
+======================*/
+
+[class^=col-]{		/*any class which starts with "col-" will get a float left*/
+	width: 100%;
+	margin-top: 1em;
+}
+
+[class^=col-]:first-child{
+		margin-top: 0;
+}
+
+.col-1{
+	width: 33.3333334%;
+	float: left;
+}
+
+
+@media(min-width: 40rem){
+
+	[class^=col-]{		
+		float: left;
+		padding: 0 .5em;
+		margin-top: 0;
+
+	}	
+
+	[class^=col-]:first-child{
+		padding-left: 0;
+	}
+
+	[class^=col-]:last-child{
+		padding-right: 0;
+	}
+	
+	.col-3{
+		width: 50%;
+
+	}
+
+	.col-1{
+		width:16.6666%;/*(100/6) 100-screen % and 6- grids in this page*/
+	}
+}
+
+
+/*typography
+======================*/
+
+h1{
+	font-weight: 300;
+	font-size: 2.5rem;
+	margin-top: 0;
+}
+
+p{
+	margin-top: 0;
+	line-height: 1.5;
+
+}
+
+p:last-of-type{
+	margin-bottom: 0;
+}
+.title{
+	font-size: 2.5rem;
+	margin-bottom: 1.5em;
+	margin-top: 1em;
+	font-weight: 900;
+
+}
+
+.title span{
+	font-weight: 300;
+	display: block;/*to make "for companies..." go below "Making things.."*/
+	font-size: .9em;/*half of 2.5rem becoz it is light n small*/
+}
+
+.title-cta{
+	margin-bottom: 0 0 .5em;
+}
+
+.unstyled-list{			/*for no bullet points*/
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+@media(min-width:60rem){ /*media query related to typography*/
+	p{
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
+	.title{
+		font-size: 3.7rem;
+	}
+}
+
+
+/*buttons
+======================*/
+
+.button{
+	display: inline-block;
+	font-size: 1.15rem;
+	text-decoration: none;/*to remove underline*/
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	padding: .7em 1.5em;
+}
+
+@media(min-width: 6rem){
+	.button{
+		font-size: 1.1rem;
+	}
+}
+
+
+.button-small{
+	font-size: .7rem;
+	font-weight: 700;
+}
+
+.button-accent{
+	color:#00ff6c;
+	border-color: #00ff6c;
+
+}
+
+
+.button-accent:hover,
+.button-accent:focus{
+	background: #00ff6c;
+	color: #232323;
+}
+
+
+.button-dark{
+	color:#232323;
+	border-color: #232323;
+
+}
+
+
+.button-dark:hover,
+.button-dark:focus{
+	background: #232323;
+	color: #00ff6c;
+}
+
+
+/*parallax
+======================*/
+	.parallax-bg,
+	.parallax--box{
+		transition: initial;
+	}
+
+
+/*header
+======================*/
+
+header{
+	position: absolute;
+	/*left: 0;
+	right:0; or code below width=100*/
+	width:100%;
+	margin: 1em;/*1em=font_size*/
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	margin: 1em;
+}
+
+nav a{
+	font-weight: 900;
+	text-decoration: none;/*to remove underline*/
+	text-transform: uppercase;
+	font-size: .8em;
+	padding: .5em;
+	color: #FFF;
+}
+
+
+nav a:hover,
+nav a:focus{
+	color: #DDD;
+}
+
+
+@media(min-width:60rem){ /*media query related to navigation*/
+	.logo{
+		float: left;
+	}
+
+	nav{
+		float: right;
+	}
+}
+
+/*home hero
+======================*/
+
+.home-hero{
+	background-image:url(../img/hero-bg.jpg);
+	background-size: cover;/*to make bg image uniform, so the picture will not tile*/
+	background-position: center;/*background is centered*/
+	padding: 10em 0;
+	color: #FFF;
+	background-attachment: fixed;*/*-->by default it is fixed-->*//*To fix the background image in a place*/
+}
+
+@media(min-width: 60rem){
+	.home-hero{
+		height: 100vh;/*100vh=100viewportheight, for desktop version bg image*/
+		padding-top: 35vh;/*to make the "making things..* in center/		
+		
+	}
+}
+
+/*home hero
+======================*/
+
+.home-about-textbox {
+
+	background-color:#232323;
+
+}
+
+/*portfolio 
+===================*/
+
+figure{
+	margin: 0;
+}
+
+
+/*cta
+===================*/
+
+.cta{
+	background-color:#00ff6c;
+	padding: 3em 0; 
+}
